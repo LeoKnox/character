@@ -1,3 +1,10 @@
 export default Character = () => {
-  return <h1>Character Page</h1>;
+  return (
+    <div className="Character">
+      <h1>Character Page</h1>
+      <div className="section">g</div>
+      <div className="section">g</div>
+      <div className="section">g</div>
+    </div>
+  );
 };
