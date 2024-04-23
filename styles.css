@@ -5,7 +5,7 @@
 
 .character {
   display: grid,
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 0fr);
   background-color: blue;
 }
 
