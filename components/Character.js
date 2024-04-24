@@ -1,11 +1,13 @@
 import Inventory from "./Inventory.js";
+import { getName } from "./characterData.js";
 
 export default Character = () => {
+  let myCharacter = {};
   return (
     <>
       <h1>Character Page</h1>
       <div className="character">
-        <div className="stats">S</div>
+        <div className="stats">{getName}</div>
         <div className="inventory">
           <Inventory />
         </div>
