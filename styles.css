@@ -4,8 +4,8 @@
 }
 
 .character {
-  display: grid,
-  grid-template-columns: repeat(3, 0fr);
+  display: grid;
+  grid-template-columns: auto auto;
   background-color: blue;
 }
 
