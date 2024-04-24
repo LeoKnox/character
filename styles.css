@@ -5,11 +5,20 @@
 
 .character {
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 10px;
+  grid-template-columns: 30% 30% 30%;
+  gap: 3.3%;
   background-color: blue;
 }
 
-.section {
+.stats {
+  background-color: red;
+  grid-column: 1 / span 2;
+}
+.inventory {
+  background-color: red;
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+.abilities {
   background-color: red;
 }
