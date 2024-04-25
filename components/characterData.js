@@ -3,6 +3,10 @@ let cd = {
   class: "Fighter",
   atk: 10,
   def: 10,
+  inventory: {
+    weapons: ["axe", "sword"],
+    pack: ["rations", "rope", "wine"],
+  },
 };
 
 export const getName = () => {
@@ -11,4 +15,8 @@ export const getName = () => {
 
 export const getClass = () => {
   return cd.class;
+};
+
+export const getInventory = () => {
+  return cd.inventory;
 };
