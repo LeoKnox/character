@@ -4,11 +4,9 @@ export default Character = ({ getInventory }) => {
       {Object.keys(getInventory).map((key) => (
         <button>{key}</button>
       ))}
-      <dl>
-        <dt>Weapons</dt>
-        <dd>Sword</dd>
-        <dd>Axe</dd>
-      </dl>
+      {getInventory["weapons"].map((item) => (
+        <p>{item}</p>
+      ))}
     </>
   );
 };
