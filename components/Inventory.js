@@ -7,9 +7,11 @@ export default Character = ({ getInventory }) => {
       {Object.keys(getInventory).map((key) => (
         <button onClick={() => setType(key)}>{key}</button>
       ))}
+      <table>
       {getInventory[type].map((item) => (
-        <p>{item}</p>
+        <tr><td>{item}</td></tr>
       ))}
+      </table>
     </>
   );
 };
