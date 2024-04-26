@@ -6,6 +6,7 @@ export default Character = ({ getInventory }) => {
     backgroundColor: "black",
     border: "none",
     padding: ".4em",
+    textDecoration: "none",
   };
   const [type, setType] = useState("weapons");
   return (
