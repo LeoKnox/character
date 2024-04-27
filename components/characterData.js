@@ -1,12 +1,11 @@
+import { getCharacterInventory } from "./characterInventory.js";
+
 let cd = {
   name: "Aelien",
   class: "Fighter",
   atk: 10,
   def: 10,
-  inventory: {
-    weapons: ["axe", "sword"],
-    pack: ["rations", "rope", "wine"],
-  },
+  inventory: getCharacterInventory(),
 };
 
 export const getName = () => {
