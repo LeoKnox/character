@@ -8,7 +8,7 @@ export default Character = ({ getInventory }) => {
     padding: ".4em",
     textDecoration: "none",
   };
-  const [type, setType] = useState("weapons");
+  const [type, setType] = useState(Object.keys(getInventory)[0]);
   return (
     <>
       <table>
