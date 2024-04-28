@@ -10,10 +10,10 @@ export default Character = () => {
       <div className="character">
         <div className="stats">
           {getName}
-          <p>{getClass()}</p>
+          <p>{getClass}</p>
         </div>
         <div className="inventory">
-          <Inventory getInventory={getInventory()} />
+          <Inventory getInventory={getInventory} />
         </div>
         <div className="abilities">G</div>
       </div>
