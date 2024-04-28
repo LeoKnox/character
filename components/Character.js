@@ -1,8 +1,13 @@
 import Inventory from "./Inventory.js";
-import { getName, getClass, getInventory } from "./characterData.js";
+import {
+  getName,
+  getClass,
+  getInventory,
+  attackAlpha,
+} from "./characterData.js";
 
 export default Character = () => {
-  //console.log(getName());
+  console.log(attackAlpha(2));
   let myCharacter = {};
   return (
     <>
@@ -15,7 +20,9 @@ export default Character = () => {
         <div className="inventory">
           <Inventory getInventory={getInventory} />
         </div>
-        <div className="abilities">G</div>
+        <div className="abilities">
+          <button>Attack</button>
+        </div>
       </div>
     </>
   );
