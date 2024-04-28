@@ -13,3 +13,7 @@ export const getName = cd.name;
 export const getClass = cd.class;
 
 export const getInventory = cd.inventory;
+
+export const attackAlpha = (factor) => {
+  return cd.atk * factor;
+};
