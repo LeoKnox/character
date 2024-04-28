@@ -8,7 +8,7 @@ let cd = {
   inventory: getCharacterInventory(),
 };
 
-export const getName = cd.name;
+export const getName = <h1>{cd.name}</h1>;
 
 export const getClass = cd.class;
 
