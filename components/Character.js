@@ -7,7 +7,9 @@ import {
 } from "./characterData.js";
 
 export default Character = () => {
-  console.log(attackAlpha(2));
+  const attackButton = () => {
+    console.log(attackAlpha(2));
+  };
   let myCharacter = {};
   return (
     <>
@@ -21,7 +23,7 @@ export default Character = () => {
           <Inventory getInventory={getInventory} />
         </div>
         <div className="abilities">
-          <button>Attack</button>
+          <button onClick={() => attackButton()}>Attack</button>
         </div>
       </div>
     </>
