@@ -10,10 +10,6 @@ let cd = {
 
 export const getName = cd.name;
 
-export const getClass = () => {
-  return cd.class;
-};
+export const getClass = cd.class;
 
-export const getInventory = () => {
-  return cd.inventory;
-};
+export const getInventory = cd.inventory;
