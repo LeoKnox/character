@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Inventory from "./Inventory.js";
 import {
   getName,
@@ -7,6 +8,7 @@ import {
 } from "./characterData.js";
 
 export default Character = () => {
+  const [dialogue, setDialogue] = useState(["ready for adventure"]);
   const attackButton = () => {
     console.log(attackAlpha(2));
   };
@@ -24,6 +26,11 @@ export default Character = () => {
         </div>
         <div className="abilities">
           <button onClick={() => attackButton()}>Attack</button>
+        </div>
+        <div className="dialogue">
+          {dialogue.map((statement) => (
+            <p>{statement}</p>
+          ))}
         </div>
       </div>
     </>
