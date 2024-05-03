@@ -1,25 +1,45 @@
 import { useState } from "react";
-import "./styles.css";
-import "./components/Home.js";
-import "./components/Build.js";
-import "./components/Character.js";
-import "./components/Adventure.js";
+import Inventory from "./Inventory.js";
+import {
+  getName,
+  getClass,
+  getInventory,
+  attackAlpha,
+  getAtk,
+  editAtk,
+} from "./characterData.js";
 
-export default function App() {
-  const [page, setPage] = useState(<Character />);
+export default Character = () => {
+  const [dialogue, setDialogue] = useState(["ready for adventure"]);
+  const attackButton = () => {
+    let x = [...dialogue, attackAlpha(2)];
+    setDialogue(x);
+  };
+  let myCharacter = {};
   return (
-    <div className="App">
-      <button
-        style={{ color: "Blue" }}
-        disabled={page === <Home />}
-        onClick={() => setPage(<Home />)}
-      >
-        Home
-      </button>
-      <button onClick={() => setPage(<Adventure />)}>Adventure</button>
-      <button onClick={() => setPage(<Build />)}>Build</button>
-      <button onClick={() => setPage(<Character />)}>Character</button>
-      {page}
-    </div>
+    <>
+      <h1>Character Page</h1>
+      <div className="character">
+        <div className="stats">
+          {getName}
+          <p>{getClass}</p>
+        </div>
+        <div className="inventory">
+          <Inventory getInventory={getInventory} />
+        </div>
+      </div>
+      <div>
+        <p>{getAtk}</p>
+        <button onClick={() => editAtk(11)}>Update</button>
+      </div>
+      <div className="dialogue">
+        <div className="abilities">
+          <button onClick={() => attackButton()}>Attack</button>
+        </div>
+        {dialogue.map((statement) => (
+          <p>{statement}</p>
+        ))}
+      </div>
+    </>
   );
-}
+};
