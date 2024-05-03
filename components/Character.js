@@ -27,11 +27,11 @@ export default Character = () => {
         <div className="abilities">
           <button onClick={() => attackButton()}>Attack</button>
         </div>
-        <div className="dialogue">
-          {dialogue.map((statement) => (
-            <p>{statement}</p>
-          ))}
-        </div>
+      </div>
+      <div className="dialogue">
+        {dialogue.map((statement) => (
+          <p>{statement}</p>
+        ))}
       </div>
     </>
   );
