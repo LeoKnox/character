@@ -10,7 +10,8 @@ import {
 export default Character = () => {
   const [dialogue, setDialogue] = useState(["ready for adventure"]);
   const attackButton = () => {
-    console.log(...dialogue, attackAlpha(2));
+    let x = [...dialogue, attackAlpha(2)];
+    setDialogue([...dialogue, attackAlpha(2)]);
   };
   let myCharacter = {};
   return (
