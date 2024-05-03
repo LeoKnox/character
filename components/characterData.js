@@ -14,6 +14,12 @@ export const getClass = cd.class;
 
 export const getInventory = cd.inventory;
 
+export const getAtk = cd.atk;
+
+export const editAtk = (newStat) => {
+  cd.atk = newStat;
+};
+
 export const attackAlpha = (factor) => {
   return cd.atk * factor;
 };
