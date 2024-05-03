@@ -10,7 +10,7 @@ import {
 export default Character = () => {
   const [dialogue, setDialogue] = useState(["ready for adventure"]);
   const attackButton = () => {
-    console.log(attackAlpha(2));
+    console.log(...dialogue, attackAlpha(2));
   };
   let myCharacter = {};
   return (
@@ -24,11 +24,11 @@ export default Character = () => {
         <div className="inventory">
           <Inventory getInventory={getInventory} />
         </div>
+      </div>
+      <div className="dialogue">
         <div className="abilities">
           <button onClick={() => attackButton()}>Attack</button>
         </div>
-      </div>
-      <div className="dialogue">
         {dialogue.map((statement) => (
           <p>{statement}</p>
         ))}
