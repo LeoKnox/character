@@ -1,4 +1,5 @@
 import { getCharacterInventory } from "./characterInventory.js";
+import { useState } from "react";
 
 let cd = {
   name: "Aelien",
@@ -17,7 +18,8 @@ export const getInventory = cd.inventory;
 export const getAtk = cd.atk;
 
 export const editAtk = (newStat) => {
-  cd.atk = newStat;
+  console.log(`new state: ${newStat}`);
+  return (cd.atk = newStat);
 };
 
 export const attackAlpha = (factor) => {
