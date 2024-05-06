@@ -21,7 +21,7 @@ export default Character = ({ getInventory }) => {
         ))}
         {getInventory[type].map((item) => (
           <tr>
-            <td>{item}</td>
+            <td>{item["name"] || item}</td>
           </tr>
         ))}
       </table>
