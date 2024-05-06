@@ -1,13 +1,15 @@
 import { getCharacterInventory } from "./characterInventory.js";
 import { useState } from "react";
 
+let hpt = 15;
+
 let cd = {
   name: "Aelien",
   class: "Fighter",
   atk: 10,
   def: 10,
   inventory: getCharacterInventory(),
-  hp: <p>HP: 20</p>,
+  hp: <p>HP: {hpt}</p>,
 };
 
 export const getName = <h1>{cd.name}</h1>;
