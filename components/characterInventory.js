@@ -1,5 +1,6 @@
+import { sword } from "./weaponData.js";
 let inventory = {
-  weapons: ["axe", "sword"],
+  weapons: ["axe", sword],
   pack: ["rations", "rope", "wine", "map"],
 };
 
