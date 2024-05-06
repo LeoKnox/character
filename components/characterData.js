@@ -22,7 +22,7 @@ export const getAtk = cd.atk;
 
 export const editAtk = (newStat) => {
   console.log(`new state: ${newStat}`);
-  return (cd.atk = newStat);
+  hpt = newStat;
 };
 
 export const attackAlpha = (factor) => {
