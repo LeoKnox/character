@@ -7,6 +7,7 @@ let cd = {
   atk: 10,
   def: 10,
   inventory: getCharacterInventory(),
+  hp: <p>HP: 20</p>,
 };
 
 export const getName = <h1>{cd.name}</h1>;
@@ -25,3 +26,5 @@ export const editAtk = (newStat) => {
 export const attackAlpha = (factor) => {
   return cd.atk * factor;
 };
+
+export const getHp = cd.hp;
