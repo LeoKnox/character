@@ -1,3 +1,10 @@
+import { dungeonData } from "./roomData.js";
+
 export default Adventure = () => {
-  return <h3>Adventure Home</h3>;
+  return (
+    <>
+      <h3>Adventure Home</h3>
+      <p>{dungeonData.name}z</p>
+    </>
+  );
 };
