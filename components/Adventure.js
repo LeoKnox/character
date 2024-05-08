@@ -4,7 +4,15 @@ export default Adventure = () => {
   return (
     <>
       <h3>Adventure Home</h3>
-      <p>{dungeonData.roomName}</p>
+      <div>
+        {dungeonData.length.map((x) => (
+          <tr>
+            {dungeonData.length.map((y) => (
+              <td>x</td>
+            ))}
+          </tr>
+        ))}
+      </div>
     </>
   );
 };
