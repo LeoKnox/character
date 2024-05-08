@@ -5,11 +5,9 @@ export default Adventure = () => {
     <>
       <h3>Adventure Home</h3>
       <div>
-        {() => {
-          for (var i = 0; i < dungeonData.x; i++) {
-            <p>tt</p>;
-          }
-        }}
+      {[...Array(10)].map((e, i) => {
+    return <p key={i}>{i}</p>
+  })}
       </div>
     </>
   );
