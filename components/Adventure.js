@@ -4,7 +4,7 @@ export default Adventure = () => {
   return (
     <>
       <h3>Adventure Home</h3>
-      <p>{dungeonData.name}z</p>
+      <p>{dungeonData.roomName}</p>
     </>
   );
 };
