@@ -5,9 +5,9 @@ export default Adventure = () => {
     <>
       <h3>Adventure Home</h3>
       <div>
-      {[...Array(10)].map((e, i) => {
-    return <p key={i}>{i}</p>
-  })}
+        {[...Array(dungeonData["width"])].map((e, i) => {
+          return <p key={i}>{i}</p>;
+        })}
       </div>
     </>
   );
