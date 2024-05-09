@@ -9,9 +9,11 @@ export default Adventure = () => {
           {[...Array(dungeonData["width"])].map(() => {
             return (
               <tr>
+                +
                 {[...Array(dungeonData["length"])].map(() => (
                   <td>*</td>
                 ))}
+                +
               </tr>
             );
           })}
