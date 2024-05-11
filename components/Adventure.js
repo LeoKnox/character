@@ -13,9 +13,7 @@ export default Adventure = () => {
     );
   };
   const test = () => {
-    console.log(
-      document.querySelector("tr.status_visible td:nth-child(1)").textContent
-    );
+    console.log("test");
   };
   return (
     <>
