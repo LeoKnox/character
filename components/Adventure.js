@@ -4,7 +4,7 @@ export default Adventure = () => {
   const drawRow = (width) => {
     return (
       <>
-      #
+        #
         {[...Array(width)].map(() => (
           <td>+</td>
         ))}
@@ -17,7 +17,6 @@ export default Adventure = () => {
       <h3>Adventure Home</h3>
       <div>
         <table>
-          {drawRow(3)}
           <tr>
             #
             {[...Array(dungeonData["length"])].map(() => (
@@ -25,14 +24,10 @@ export default Adventure = () => {
             ))}
             #
           </tr>
-          {[...Array(dungeonData["width"])].map(() => {
+          {[...Array(dungeonData["length"])].map(() => {
             return (
               <tr>
-                #
-                {[...Array(dungeonData["length"])].map(() => (
-                  <td>+</td>
-                ))}
-                #
+                {drawRow(dungeonData["width"])}
               </tr>
             );
           })}
