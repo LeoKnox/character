@@ -16,9 +16,9 @@ export default Adventure = () => {
     console.log("draw room");
     return (
         <>
-    for (let i = 0; i < x; i++) {
-       <p id={"0" + i}>{wall}</p>;
-    }</>)
+    {for (let i = 0; i < x; i++) (
+       <p id={i}>{wall}</p>;
+    )}</>)
   };
   const test = () => {
     console.log("test");
