@@ -1,20 +1,23 @@
 import { dungeonData } from "./roomData.js";
 
-export default Adventure = (width) => {
-  const drawRow = () => {
+export default Adventure = () => {
+  const drawRow = (width) => {
     return (
-    <>
-    #
-    <td>+</td>
-    #
-    </>);
+      <>
+      #
+        {[...Array(width)].map(() => (
+          <td>+</td>
+        ))}
+        #
+      </>
+    );
   };
   return (
     <>
       <h3>Adventure Home</h3>
       <div>
-        {drawRow()}
         <table>
+          {drawRow(3)}
           <tr>
             #
             {[...Array(dungeonData["length"])].map(() => (
