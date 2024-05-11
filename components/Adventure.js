@@ -1,14 +1,14 @@
 import { dungeonData } from "./roomData.js";
 
 export default Adventure = () => {
-  const drawRow = (width) => {
+  const drawRow = (width, wall, floor) => {
     return (
       <>
-        #
+        {wall}
         {[...Array(width)].map(() => (
-          <td>+</td>
+          <td>{floor}</td>
         ))}
-        #
+        {wall}
       </>
     );
   };
@@ -28,7 +28,7 @@ export default Adventure = () => {
             #
           </tr>
           {[...Array(dungeonData["length"])].map(() => {
-            return <tr>{drawRow(dungeonData["width"])}</tr>;
+            return <tr>{drawRow(dungeonData["width"], "#", "+")}</tr>;
           })}
           <tr>
             #
