@@ -1,8 +1,13 @@
 import { dungeonData } from "./roomData.js";
 
-export default Adventure = () => {
+export default Adventure = (width) => {
   const drawRow = () => {
-    return <p>vvvv</p>;
+    return (
+    <>
+    #
+    <td>+</td>
+    #
+    </>);
   };
   return (
     <>
