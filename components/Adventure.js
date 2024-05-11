@@ -12,6 +12,11 @@ export default Adventure = () => {
       </>
     );
   };
+  const test = () => {
+    console.log(
+      document.querySelector("tr.status_visible td:nth-child(1)").textContent
+    );
+  };
   return (
     <>
       <h3>Adventure Home</h3>
@@ -25,11 +30,7 @@ export default Adventure = () => {
             #
           </tr>
           {[...Array(dungeonData["length"])].map(() => {
-            return (
-              <tr>
-                {drawRow(dungeonData["width"])}
-              </tr>
-            );
+            return <tr>{drawRow(dungeonData["width"])}</tr>;
           })}
           <tr>
             #
@@ -39,6 +40,7 @@ export default Adventure = () => {
             #
           </tr>
         </table>
+        <button onClick={test}>test</button>
       </div>
     </>
   );
