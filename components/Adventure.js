@@ -21,21 +21,13 @@ export default Adventure = () => {
       <div>
         <table>
           <tr>
-            #
-            {[...Array(dungeonData["length"])].map(() => (
-              <td>#</td>
-            ))}
-            #
+          {drawRow(dungeonData["width"], "#", "#")}
           </tr>
           {[...Array(dungeonData["length"])].map(() => {
             return <tr>{drawRow(dungeonData["width"], "#", "+")}</tr>;
           })}
           <tr>
-            #
-            {[...Array(dungeonData["length"])].map(() => (
-              <td>#</td>
-            ))}
-            #
+          {drawRow(dungeonData["width"], "#", "#")}
           </tr>
         </table>
         <button onClick={test}>test</button>
