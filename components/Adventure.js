@@ -17,7 +17,7 @@ export default Adventure = () => {
     return (
       <>
         {[...Array(y)].map(() => {
-          <tr>[...Array(x)].map(() => {<td>"i"</td>});</tr>;
+          document.getElementById("testDiv").append(<td>1</td>);
         })}
       </>
     );
@@ -28,7 +28,7 @@ export default Adventure = () => {
   return (
     <>
       <h3>Adventure Home</h3>
-      <div>
+      <div id="testDiv">
         <table>
           <tr>{drawRow(dungeonData["width"], "#", "#")}</tr>
           {[...Array(dungeonData["length"])].map(() => {
