@@ -14,19 +14,16 @@ export default Adventure = () => {
   };
   const drawRoom = (x, y, wall, floor) => {
     console.log("draw room");
-    return (
-      <>
-        {[...Array(y)].map(() => {
-          {
-            return(
-            [...Array(x)].map(() => {
-               <td>"i"</td>;
-            })
-            )
-          }
-        })}
-      </>
-    );
+
+    <>
+      {[...Array(y)].map(() => {
+        return ({
+          [...Array(x)].map(() => {
+            <td>"i"</td>
+          });
+        })
+      })}
+    </>;
   };
   const test = () => {
     console.log("test");
