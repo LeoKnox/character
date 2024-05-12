@@ -18,8 +18,8 @@ export default Adventure = () => {
       <>
         {[...Array(y)].map(() => {
           {
-            return [...Array(y)].map(() => {
-              <td>i</td>;
+            [...Array(x)].map(() => {
+              return <td>i</td>;
             });
           }
         })}
