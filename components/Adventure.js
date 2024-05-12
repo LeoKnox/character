@@ -16,8 +16,10 @@ export default Adventure = () => {
     console.log("draw room");
     return (
         <>
-    {[...Array(x)].map(() => {
-            return <tr>i</tr>;
+    {[...Array(y)].map(() => {
+        {[...Array(y)].map(() => {
+            return <td>{floor}</td>;
+            })}
           })}</>)
   };
   const test = () => {
