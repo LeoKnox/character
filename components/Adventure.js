@@ -16,9 +16,9 @@ export default Adventure = () => {
     console.log("draw room");
     return (
         <>
-    {for (let i = 0; i < x; i++) (
-       <p id={i}>{wall}</p>;
-    )}</>)
+    {[...Array(x)].map(() => {
+            return <tr>i</tr>;
+          })}</>)
   };
   const test = () => {
     console.log("test");
