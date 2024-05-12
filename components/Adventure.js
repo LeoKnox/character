@@ -17,7 +17,7 @@ export default Adventure = () => {
     return (
       <>
         {[...Array(y)].map(() => {
-          document.getElementsByName("App").append("1");
+          document.getElementsByName("App").appendChild("1");
         })}
       </>
     );
