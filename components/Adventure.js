@@ -17,7 +17,7 @@ export default Adventure = () => {
     return (
       <>
         {[...Array(y)].map(() => {
-          document.getElementById("testDiv").append(1);
+          document.getElementById("testDiv").append.textContext("1");
         })}
       </>
     );
