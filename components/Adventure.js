@@ -18,9 +18,11 @@ export default Adventure = () => {
       <>
         {[...Array(y)].map(() => {
           {
+            return(
             [...Array(x)].map(() => {
-              return <td>i</td>;
-            });
+               <td>"i"</td>;
+            })
+            )
           }
         })}
       </>
