@@ -5,13 +5,11 @@ export default Adventure = () => {
     return (
       <>
         {wall}
+
         {[...Array(width)].map(() => (
-            <p>
-            {[...Array(width)].map(() => (
           <td>{floor}</td>
-           ))}
-           </p>
         ))}
+
         {wall}
       </>
     );
@@ -20,8 +18,12 @@ export default Adventure = () => {
     console.log("draw room");
     return (
       <>
-        {[y].map(() => (
-          <td>{floor}</td>
+        {[x].map(() => (
+          <p>
+            {[y].map(() => (
+              <label>{floor}</label>
+            ))}
+          </p>
         ))}
       </>
     );
