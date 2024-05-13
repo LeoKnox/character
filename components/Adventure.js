@@ -16,9 +16,9 @@ export default Adventure = () => {
     console.log("draw room");
     return (
       <>
-        {[...Array(y)].map(() => {
-          document.getElementsByName("App").appendChild("1");
-        })}
+        {[y].map(() => (
+          <td>{floor}</td>
+        ))}
       </>
     );
   };
