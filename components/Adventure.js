@@ -1,6 +1,11 @@
 import { dungeonData } from "./roomData.js";
 
 export default Adventure = () => {
+    const newRoom = [["+","+","+"],["+","+","+"]]
+    const drawNewRoom = () => {
+        newRoom.map((data) => (
+        <p>{data}</p>
+        ))}
   const drawRow = (width, wall, floor) => {
     return (
       <>
@@ -42,6 +47,7 @@ export default Adventure = () => {
           })}
           <tr>{drawRow(dungeonData["width"], "#", "#")}</tr>
         </table>
+        {drawNewRoom()}
         {drawRoom(5, 3, "#", "+")}
         <button onClick={test}>test</button>
       </div>
