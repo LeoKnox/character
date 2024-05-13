@@ -6,7 +6,11 @@ export default Adventure = () => {
       <>
         {wall}
         {[...Array(width)].map(() => (
+            <p>
+            {[...Array(width)].map(() => (
           <td>{floor}</td>
+           ))}
+           </p>
         ))}
         {wall}
       </>
