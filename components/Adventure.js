@@ -18,9 +18,9 @@ export default Adventure = () => {
     console.log("draw room");
     return (
       <>
-        {[x].map(() => (
+        {[...Array(x)].map(() => (
           <p>
-            {[y].map(() => (
+            {[...Array(y)].map(() => (
               <label>{floor}</label>
             ))}
           </p>
