@@ -1,11 +1,13 @@
 import { dungeonData } from "./roomData.js";
 
 export default Adventure = () => {
-    const newRoom = [["+","+","+"],["+","+","+"]]
-    const drawNewRoom = () => {
-        newRoom.map((data) => (
-        <p>{data}</p>
-        ))}
+  const newRoom = [
+    ["+", "+", "+"],
+    ["+", "+", "+"],
+  ];
+  const drawNewRoom = () => {
+    return newRoom.map((data) => <p>{data}</p>);
+  };
   const drawRow = (width, wall, floor) => {
     return (
       <>
