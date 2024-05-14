@@ -7,7 +7,8 @@ export default Adventure = () => {
   ];
   const drawNewRoom = () => {
     return newRoom.map((data) => {
-      data.map((tile) => (<label>{tile}"y"</label>));
+      "i";
+     return newRoom.map((tile) => <label>{tile}"y"</label>);
     });
   };
   const drawRow = (width, wall, floor) => {
