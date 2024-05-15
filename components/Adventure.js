@@ -6,9 +6,10 @@ export default Adventure = () => {
     ["+", ".", ".", "+"],
   ];
   const drawNewRoom = () => {
-
-    return newRoom.map((data) => {
-      (<p>return data.map((tile) => <label>tile</label>)</p>);
+    return newRoom.forEach((data) => {
+      <p>
+        return (data.forEach((tile) => <label>"i"</label>))
+      </p>;
     });
   };
   const drawRow = (width, wall, floor) => {
