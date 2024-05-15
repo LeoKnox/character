@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import { useEffect } from "react";
 import { dungeonData } from "./roomData.js";
 
 export default Adventure = () => {
@@ -9,7 +9,10 @@ export default Adventure = () => {
   const drawNewRoom = () => {
     return newRoom.map((data) => (
       <p>
-        return {(data.map((tile) => <label>t</label>))}
+
+        {data.map((tile) => (
+          <label>{tile}</label>
+        ))}
       </p>
     ));
   };
