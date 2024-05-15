@@ -2,6 +2,10 @@ import { useEffect } from "react";
 import { dungeonData } from "./roomData.js";
 
 export default Adventure = () => {
+  useEffect(() => {
+    console.log("kiiro");
+    document.getElementById("effectDiv").append("<p>t</p>");
+  }, []);
   const newRoom = [
     ["+", "+", "+"],
     ["+", ".", ".", "+"],
@@ -9,7 +13,6 @@ export default Adventure = () => {
   const drawNewRoom = () => {
     return newRoom.map((data) => (
       <p>
-
         {data.map((tile) => (
           <label>{tile}</label>
         ))}
@@ -60,6 +63,7 @@ export default Adventure = () => {
         {drawNewRoom()}
         {drawRoom(5, 3, "#", "+")}
         <button onClick={test}>test</button>
+        <div id="effectDiv"></div>
       </div>
     </>
   );
