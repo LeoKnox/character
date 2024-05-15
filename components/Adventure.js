@@ -1,3 +1,4 @@
+import {useEffect} from "react";
 import { dungeonData } from "./roomData.js";
 
 export default Adventure = () => {
@@ -6,11 +7,11 @@ export default Adventure = () => {
     ["+", ".", ".", "+"],
   ];
   const drawNewRoom = () => {
-    return newRoom.forEach((data) => {
+    return newRoom.map((data) => (
       <p>
-        return (data.forEach((tile) => <label>"i"</label>))
-      </p>;
-    });
+        return {(data.map((tile) => <label>t</label>))}
+      </p>
+    ));
   };
   const drawRow = (width, wall, floor) => {
     return (
