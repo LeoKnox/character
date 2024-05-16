@@ -10,7 +10,7 @@ export default Adventure = () => {
     ["+", "+", "+"],
     ["+", ".", ".", "+"],
   ];
-  const roomState = useState(newRoom.map((x) => <tr>{x}</tr>));
+  const roomState = useState(newRoom.map((x) => <tr>{x.map((y) => (<td>{y}</td>))}</tr>));
   const drawNewRoom = () => {
     return newRoom.map((data) => (
       <p>
