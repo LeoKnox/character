@@ -32,6 +32,9 @@ export default Adventure = () => {
   const positionChar = (x = 1, y = 1) => {
     document.getElementById(y + "-" + x).innerHTML = "人";
   };
+  const takeTurn = () => {
+    alert("turn taken");
+  };
   const positionMob = (mobArray = [{ x: 3, y: 5 }]) => {
     //const positionMob = (x = 3, y = 5) => {
     let temp = <label id="aka">敵</label>;
@@ -52,7 +55,18 @@ export default Adventure = () => {
         <button onClick={test}>test</button>
         {roomState}
       </div>
-      <div id="effectDiv"></div>
+      <div id="effectDiv">
+        <p>
+          <button>上</button>
+        </p>
+        <p>
+          <button>左</button>
+          <button>右</button>
+        </p>
+        <p>
+          <button onClick={() => takeTurn()}>下</button>
+        </p>
+      </div>
     </>
   );
 };
