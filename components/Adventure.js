@@ -1,55 +1,34 @@
-import { useEffect, useState } from "react";
-import { dungeonData } from "./roomData.js";
-// floor = yuka wall = kabe enemy = teki
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+#aka {
+  position: absolute;
+  color: blue;
+}
+#advDiv {
+  backgroud-color: blue;
+  color: red;
+}
 
-export default Adventure = () => {
-  useEffect(() => {
-    //console.log("kiiro");
-    //document.getElementById("effectDiv").append(<p>floor</p>);
-    positionChar();
-  }, []);
-  useEffect(() => {
-    positionMob();
-  }, []);
-  const newRoom = [
-    ["壁", "壁", "壁", "壁", "壁", "壁", "壁"],
-    ["壁", "床", "床", "床", "床", "床", "壁"],
-    ["壁", "床", "床", "床", "床", "床", "壁"],
-    ["壁", "床", "床", "床", "床", "床", "壁"],
-    ["壁", "床", "床", "床", "床", "床", "壁"],
-    ["壁", "床", "床", "床", "床", "床", "壁"],
-    ["壁", "壁", "壁", "壁", "壁", "壁", "壁"],
-  ];
-  const roomState = useState(
-    newRoom.map((x, ix) => (
-      <tr>
-        {x.map((y, iy) => (
-          <td id={iy + "-" + ix}>{y}</td>
-        ))}
-      </tr>
-    ))
-  );
-  const positionChar = (x = 1, y = 1) => {
-    document.getElementById(y + "-" + x).innerHTML = "人";
-  };
-  const positionMob = (mobArray = [{ x: 3, y: 5 }]) => {
-    //const positionMob = (x = 3, y = 5) => {
-    let temp = <label id="aka">敵</label>;
-    document
-      .getElementById(mobArray[0].x + "-" + mobArray[0].y)
-      .append(JSON.stringify(<label id="aka">敵</label>));
-  };
-  const test = () => {
-    console.log("test");
-  };
-  return (
-    <>
-      <h3>Adventure Home</h3>
-      <div id="advDiv">
-        <button onClick={test}>test</button>
-        {roomState}
-      </div>
-      <div id="effectDiv"></div>
-    </>
-  );
-};
+.character {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 3.3%;
+  background-color: blue;
+}
+
+.stats {
+  background-color: red;
+  grid-column: 1 / span 2;
+}
+.inventory {
+  background-color: red;
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+.abilities {
+  background-color: red;
+}
+.dialogue {
+}
