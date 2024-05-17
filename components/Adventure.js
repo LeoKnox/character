@@ -3,15 +3,16 @@ import { dungeonData } from "./roomData.js";
 // floor = yuka wall = kabe enemy = teki
 
 export default Adventure = () => {
+  const [hito, setHito] = useState({ x: 1, y: 1 });
   useEffect(() => {
     //console.log("kiiro");
     //document.getElementById("effectDiv").append(<p>floor</p>);
     positionChar(hito);
-  }, []);
+  }, [hito]);
   useEffect(() => {
     positionMob();
   }, []);
-  const [hito, setHito] = useState({ x: 1, y: 1 });
+
   const newRoom = [
     ["壁", "壁", "壁", "壁", "壁", "壁", "壁"],
     ["壁", "床", "床", "床", "床", "床", "壁"],
@@ -34,7 +35,8 @@ export default Adventure = () => {
     document.getElementById(y + "-" + x).innerHTML = "人";
   };
   const takeTurn = () => {
-    alert(`hito: ${hito.x} : ${hito.y}`);
+    setHito({ x: hito.x + 1, y: hito.y });
+    //alert(`hito: ${hito.x} : ${hito.y}`);
   };
   const positionMob = (mobArray = [{ x: 3, y: 5 }]) => {
     //const positionMob = (x = 3, y = 5) => {
