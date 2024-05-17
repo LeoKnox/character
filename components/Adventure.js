@@ -6,11 +6,12 @@ export default Adventure = () => {
   useEffect(() => {
     //console.log("kiiro");
     //document.getElementById("effectDiv").append(<p>floor</p>);
-    positionChar();
+    positionChar(hito);
   }, []);
   useEffect(() => {
     positionMob();
   }, []);
+  const [hito, setHito] = useState({ x: 1, y: 1 });
   const newRoom = [
     ["壁", "壁", "壁", "壁", "壁", "壁", "壁"],
     ["壁", "床", "床", "床", "床", "床", "壁"],
@@ -29,11 +30,11 @@ export default Adventure = () => {
       </tr>
     ))
   );
-  const positionChar = (x = 1, y = 1) => {
+  const positionChar = ({ x, y }) => {
     document.getElementById(y + "-" + x).innerHTML = "人";
   };
   const takeTurn = () => {
-    alert("turn taken");
+    alert(`hito: ${hito.x} : ${hito.y}`);
   };
   const positionMob = (mobArray = [{ x: 3, y: 5 }]) => {
     //const positionMob = (x = 3, y = 5) => {
