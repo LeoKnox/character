@@ -31,11 +31,11 @@ export default Adventure = () => {
   return (
     <>
       <h3>Adventure Home</h3>
-      <div id="testDiv">
+      <div id="advDiv">
         <button onClick={test}>test</button>
         {roomState}
-        <div id="effectDiv"></div>
       </div>
+      <div id="effectDiv"></div>
     </>
   );
 };
