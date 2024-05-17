@@ -32,8 +32,10 @@ export default Adventure = () => {
   const positionChar = (x = 1, y = 1) => {
     document.getElementById(y + "-" + x).innerHTML = "人";
   };
-  const positionMob = (x = 3, y = 5) => {
-    document.getElementById(x + "-" + y).innerHTML = "敵";
+  const positionMob = (mobArray = [{ x: 3, y: 5 }]) => {
+    //const positionMob = (x = 3, y = 5) => {
+    document.getElementById(mobArray[0].x + "-" + mobArray[0].y).innerHTML =
+      "敵";
   };
   const test = () => {
     console.log("test");
