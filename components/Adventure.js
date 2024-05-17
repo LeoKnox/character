@@ -34,8 +34,9 @@ export default Adventure = () => {
   };
   const positionMob = (mobArray = [{ x: 3, y: 5 }]) => {
     //const positionMob = (x = 3, y = 5) => {
-    document.getElementById(mobArray[0].x + "-" + mobArray[0].y).innerHTML =
-      "敵";
+    document.getElementById(
+      mobArray[0].x + "-" + mobArray[0].y
+    ).innerHTML = `<label id="aka">敵</label>`;
   };
   const test = () => {
     console.log("test");
