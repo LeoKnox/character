@@ -16,10 +16,10 @@ export default Adventure = () => {
     ["+", "+", "+", "+", "+", "+", "+"],
   ];
   const roomState = useState(
-    newRoom.map((x) => (
+    newRoom.map((x, ix) => (
       <tr>
-        {x.map((y) => (
-          <td>{y}</td>
+        {x.map((y, iy) => (
+          <td id={iy + "x" + ix}>{y}</td>
         ))}
       </tr>
     ))
