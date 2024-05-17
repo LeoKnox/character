@@ -32,7 +32,9 @@ export default Adventure = () => {
     ))
   );
   const positionChar = ({ x, y }) => {
-    document.getElementById(y + "-" + x).innerHTML = "人";
+    document.getElementById(
+      y + "-" + x
+    ).innerHTML += `<label id="hito">人</label>`;
   };
   const takeTurn = () => {
     setHito({ x: hito.x + 1, y: hito.y });
