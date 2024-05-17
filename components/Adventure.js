@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { dungeonData } from "./roomData.js";
+// floor = yuka wall = kabe enemy = teki
 
 export default Adventure = () => {
   useEffect(() => {
-    console.log("kiiro");
-    document.getElementById("effectDiv").append(<p>floor</p>);
+    //console.log("kiiro");
+    //document.getElementById("effectDiv").append(<p>floor</p>);
     positionChar();
+  }, []);
+  useEffect(() => {
+    positionMob();
   }, []);
   const newRoom = [
     ["壁", "壁", "壁", "壁", "壁", "壁", "壁"],
@@ -26,7 +30,10 @@ export default Adventure = () => {
     ))
   );
   const positionChar = (x = 1, y = 1) => {
-    document.getElementById(x + "-" + y).innerHTML = "人";
+    document.getElementById(y + "-" + x).innerHTML = "人";
+  };
+  const positionMob = (x = 3, y = 5) => {
+    document.getElementById(x + "-" + y).innerHTML = "敵";
   };
   const test = () => {
     console.log("test");
