@@ -2,6 +2,15 @@
   font-family: sans-serif;
   text-align: center;
 }
+#aka {
+  position: absolute;
+  background-color: white;
+  color: blue;
+}
+#advDiv {
+  backgroud-color: blue;
+  color: red;
+}
 
 .character {
   display: grid;
@@ -21,4 +30,6 @@
 }
 .abilities {
   background-color: red;
+}
+.dialogue {
 }
