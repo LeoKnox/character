@@ -36,10 +36,11 @@ export default Adventure = () => {
       y + "-" + x
     ).innerHTML = `<label id="hito">人</label>`;
   };
-  const takeTurn = () => {
+  const takeTurn = (e) => {
     let tileTemp = hito;
-    console.log(hito);
-    setHito({ x: hito.x + 1, y: hito.y });
+    console.log(e.target.name);
+    e.target.name === "down" ? setHito({ x: hito.x + 1, y: hito.y }) : null;
+    e.target.name === "up" ? setHito({ x: hito.x - 1, y: hito.y }) : null;
     document.getElementById(tileTemp.y + "-" + tileTemp.x).innerHTML = `床`;
     //alert(`hito: ${hito.x} : ${hito.y}`);
   };
@@ -65,14 +66,18 @@ export default Adventure = () => {
       </div>
       <div id="effectDiv">
         <p>
-          <button>上</button>
+          <button name="up" onClick={(e) => takeTurn(e)}>
+            上
+          </button>
         </p>
         <p>
           <button>左</button>
           <button>右</button>
         </p>
         <p>
-          <button onClick={() => takeTurn()}>下</button>
+          <button name="down" onClick={(e) => takeTurn(e)}>
+            下
+          </button>
         </p>
       </div>
     </>
