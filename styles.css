@@ -3,18 +3,15 @@
   text-align: center;
 }
 #hito {
-  position: absolute;
   color: darkgreen;
   background-color: white;
 }
 #aka {
-  position: absolute;
   background-color: white;
   color: blue;
 }
 #advDiv {
   font-size: 1.6em;
-  display: inline;
   backgroud-color: blue;
   color: brown;
 }
