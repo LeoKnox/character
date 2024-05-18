@@ -26,7 +26,9 @@ export default Adventure = () => {
     newRoom.map((x, ix) => (
       <tr>
         {x.map((y, iy) => (
-          <td id={iy + "-" + ix}>{y}</td>
+          <td id={iy + "-" + ix}>
+            <div>{y}</div>
+          </td>
         ))}
       </tr>
     ))
@@ -34,7 +36,7 @@ export default Adventure = () => {
   const positionChar = ({ x, y }) => {
     document.getElementById(
       y + "-" + x
-    ).innerHTML += `<label id="hito">人</label>`;
+    ).innerHTML += `<div id="hito"><label>人</label></div>`;
   };
   const takeTurn = () => {
     setHito({ x: hito.x + 1, y: hito.y });
@@ -45,7 +47,7 @@ export default Adventure = () => {
     let temp = <label id="aka">敵</label>;
     document.getElementById(
       mobArray[0].x + "-" + mobArray[0].y
-    ).innerHTML += `<label id="aka">敵</label>`;
+    ).innerHTML += `<div id="aka"><label>敵</label></div>`;
     /* document.getElementById(
       mobArray[0].x + "-" + mobArray[0].y
     ).innerHTML = `<label id="aka">敵</label>`;*/
