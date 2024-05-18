@@ -38,9 +38,11 @@ export default Adventure = () => {
   };
   const takeTurn = (e) => {
     let tileTemp = hito;
-    console.log(e.target.name);
+    //console.log(e.target.name);
     e.target.name === "down" ? setHito({ x: hito.x + 1, y: hito.y }) : null;
     e.target.name === "up" ? setHito({ x: hito.x - 1, y: hito.y }) : null;
+    e.target.name === "right" ? setHito({ x: hito.x, y: hito.y + 1 }) : null;
+    e.target.name === "left" ? setHito({ x: hito.x, y: hito.y - 1 }) : null;
     document.getElementById(tileTemp.y + "-" + tileTemp.x).innerHTML = `床`;
     //alert(`hito: ${hito.x} : ${hito.y}`);
   };
@@ -71,8 +73,12 @@ export default Adventure = () => {
           </button>
         </p>
         <p>
-          <button>左</button>
-          <button>右</button>
+          <button name="left" onClick={(e) => takeTurn(e)}>
+            左
+          </button>
+          <button name="right" onClick={(e) => takeTurn(e)}>
+            右
+          </button>
         </p>
         <p>
           <button name="down" onClick={(e) => takeTurn(e)}>
