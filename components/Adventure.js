@@ -40,6 +40,7 @@ export default Adventure = () => {
     let tileTemp = hito;
     console.log(hito);
     setHito({ x: hito.x + 1, y: hito.y });
+    document.getElementById(tileTemp.y + "-" + tileTemp.x).innerHTML = `床`;
     //alert(`hito: ${hito.x} : ${hito.y}`);
   };
   const positionMob = (mobArray = [{ x: 3, y: 5 }]) => {
