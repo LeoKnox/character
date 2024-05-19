@@ -43,7 +43,9 @@ export default Adventure = () => {
     e.target.name === "up" ? setHito({ x: hito.x - 1, y: hito.y }) : null;
     e.target.name === "right" ? setHito({ x: hito.x, y: hito.y + 1 }) : null;
     e.target.name === "left" ? setHito({ x: hito.x, y: hito.y - 1 }) : null;
-    document.getElementById(tileTemp.y + "-" + tileTemp.x).innerHTML = `床`;
+    document.getElementById(tileTemp.y + "-" + tileTemp.x).innerHTML =
+      newRoom[tileTemp.x][tileTemp.y];
+    //document.getElementById(tileTemp.y + "-" + tileTemp.x).innerHTML = `床`;
     //alert(`hito: ${hito.x} : ${hito.y}`);
   };
   const positionMob = (mobArray = [{ x: 3, y: 5 }]) => {
