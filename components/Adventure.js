@@ -48,6 +48,9 @@ export default Adventure = () => {
     //document.getElementById(tileTemp.y + "-" + tileTemp.x).innerHTML = `床`;
     //alert(`hito: ${hito.x} : ${hito.y}`);
   };
+  const charAction = () => {
+    console.log("char action");
+  };
   const positionMob = (mobArray = [{ x: 3, y: 5 }]) => {
     //const positionMob = (x = 3, y = 5) => {
     let temp = <label id="aka">敵</label>;
@@ -68,7 +71,7 @@ export default Adventure = () => {
         <button onClick={test}>test</button>
         {roomState}
       </div>
-      <div id="effectDiv">
+      <div id="effectDiv" onKeyPressedDown={charnAction()}>
         <p>
           <button name="up" onClick={(e) => takeTurn(e)}>
             上
