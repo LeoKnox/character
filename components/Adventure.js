@@ -71,7 +71,7 @@ export default Adventure = () => {
         <button onClick={test}>test</button>
         {roomState}
       </div>
-      <div id="effectDiv" onKeyPressedDown={charAction()}>
+      <div id="effectDiv" onKeyDown={() => charAction()}>
         <p>
           <button name="up" onClick={(e) => takeTurn(e)}>
             上
