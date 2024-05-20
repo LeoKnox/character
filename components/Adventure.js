@@ -41,7 +41,11 @@ export default Adventure = () => {
     //console.log(e.target.name);
     console.log(document.getElementById(hito.y + 1 + "-" + hito.x).innerHTML);
     //e.target.name === "down" ? setHito({ x: hito.x + 1, y: hito.y }) : null;
-    if (document.getElementById(hito.y + 1 + "-" + hito.x).innerHTML === "	敵") {
+    if (
+      document
+        .getElementById(hito.y + 1 + "-" + hito.x)
+        .innerHTML.contains("敵")
+    ) {
       alert("hit");
     } else {
       setHito({ x: hito.x + 1, y: hito.y });
