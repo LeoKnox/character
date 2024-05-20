@@ -40,8 +40,12 @@ export default Adventure = () => {
     let tileTemp = hito;
     //console.log(e.target.name);
     console.log(document.getElementById(hito.y + 1 + "-" + hito.x).innerHTML);
-    e.target.name === "down" ? setHito({ x: hito.x + 1, y: hito.y }) : null;
-
+    //e.target.name === "down" ? setHito({ x: hito.x + 1, y: hito.y }) : null;
+    if (document.getElementById(hito.y + 1 + "-" + hito.x).innerHTML === "	敵") {
+      alert("hit");
+    } else {
+      setHito({ x: hito.x + 1, y: hito.y });
+    }
     e.target.name === "up" ? setHito({ x: hito.x - 1, y: hito.y }) : null;
     e.target.name === "right" ? setHito({ x: hito.x, y: hito.y + 1 }) : null;
     e.target.name === "left" ? setHito({ x: hito.x, y: hito.y - 1 }) : null;
