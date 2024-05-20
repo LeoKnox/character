@@ -44,7 +44,7 @@ export default Adventure = () => {
     if (
       document
         .getElementById(hito.y + 1 + "-" + hito.x)
-        .innerHTML.contains("敵")
+        .innerHTML.includes("敵")
     ) {
       alert("hit");
     } else {
