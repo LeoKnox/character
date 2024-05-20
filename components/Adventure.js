@@ -39,7 +39,9 @@ export default Adventure = () => {
   const takeTurn = (e) => {
     let tileTemp = hito;
     //console.log(e.target.name);
+    console.log(newRoom[hito.x][hito.y]);
     e.target.name === "down" ? setHito({ x: hito.x + 1, y: hito.y }) : null;
+
     e.target.name === "up" ? setHito({ x: hito.x - 1, y: hito.y }) : null;
     e.target.name === "right" ? setHito({ x: hito.x, y: hito.y + 1 }) : null;
     e.target.name === "left" ? setHito({ x: hito.x, y: hito.y - 1 }) : null;
