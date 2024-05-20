@@ -39,7 +39,7 @@ export default Adventure = () => {
   const takeTurn = (e) => {
     let tileTemp = hito;
     //console.log(e.target.name);
-    console.log(document.getElementById(hito.y + 1 + "-" + hito.x).innerHTML);
+    console.log(document.getElementById(hito.y + "-" + (hito.x + 1)).innerHTML);
     //e.target.name === "down" ? setHito({ x: hito.x + 1, y: hito.y }) : null;
     if (
       document
