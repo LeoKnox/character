@@ -39,7 +39,7 @@ export default Adventure = () => {
   const takeTurn = (e) => {
     let tileTemp = hito;
     //console.log(e.target.name);
-    console.log(document.getElementById(hito.y + "-" + (hito.x + 1)).innerHTML);
+    console.log(document.getElementById(hito.y + 1 + "-" + hito.x).innerHTML);
     //e.target.name === "down" ? setHito({ x: hito.x + 1, y: hito.y }) : null;
     if (
       document
@@ -48,11 +48,11 @@ export default Adventure = () => {
     ) {
       alert("hit");
     } else {
-      setHito({ x: hito.x + 1, y: hito.y });
+      setHito({ x: hito.x, y: hito.y + 1 });
     }
-    e.target.name === "up" ? setHito({ x: hito.x - 1, y: hito.y }) : null;
-    e.target.name === "right" ? setHito({ x: hito.x, y: hito.y + 1 }) : null;
-    e.target.name === "left" ? setHito({ x: hito.x, y: hito.y - 1 }) : null;
+    e.target.name === "up" ? setHito({ x: hito.x, y: hito.y - 1 }) : null;
+    e.target.name === "right" ? setHito({ x: hito.x + 1, y: hito.y }) : null;
+    e.target.name === "left" ? setHito({ x: hito.x - 1, y: hito.y }) : null;
     document.getElementById(tileTemp.y + "-" + tileTemp.x).innerHTML =
       newRoom[tileTemp.x][tileTemp.y];
     //document.getElementById(tileTemp.y + "-" + tileTemp.x).innerHTML = `床`;
