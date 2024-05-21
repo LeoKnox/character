@@ -43,7 +43,7 @@ export default Adventure = () => {
     //e.target.name === "down" ? setHito({ x: hito.x + 1, y: hito.y }) : null;
     if (
       document
-        .getElementById(hito.y + 1 + "-" + hito.x)
+        .getElementById(hito.x + 1 + "-" + hito.y)
         .innerHTML.includes("敵")
     ) {
       alert("hit");
