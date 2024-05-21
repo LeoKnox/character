@@ -23,10 +23,10 @@ export default Adventure = () => {
     ["壁", "壁", "壁", "壁", "壁", "壁", "壁"],
   ];
   const roomState = useState(
-    newRoom.map((x, ix) => (
+    newRoom.map((y, iy) => (
       <tr>
-        {x.map((y, iy) => (
-          <td id={iy + "-" + ix}>{y}</td>
+        {y.map((x, ix) => (
+          <td id={iy + "-" + ix}>{x}</td>
         ))}
       </tr>
     ))
@@ -65,7 +65,7 @@ export default Adventure = () => {
     //const positionMob = (x = 3, y = 5) => {
     let temp = <label id="aka">敵</label>;
     document.getElementById(
-      mobArray[0].x + "-" + mobArray[0].y
+      mobArray[0].y + "-" + mobArray[0].x
     ).innerHTML = `<label id="aka">敵</label>`;
     /* document.getElementById(
       mobArray[0].x + "-" + mobArray[0].y
