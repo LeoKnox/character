@@ -4,6 +4,7 @@ import { dungeonData } from "./roomData.js";
 
 export default Adventure = () => {
   const [hito, setHito] = useState({ x: 1, y: 1 });
+  let option = <button>red</button>;
   useEffect(() => {
     //console.log("kiiro");
     //document.getElementById("effectDiv").append(<p>floor</p>);
@@ -48,7 +49,7 @@ export default Adventure = () => {
           .getElementById(hito.y + 1 + "-" + hito.x)
           .innerHTML.includes("敵")
       ) {
-        alert(<button>Attack</button>);
+        alert({option});
 
         //setHito({ x: hito.x, y: hito.y + 1 });
       } else {
