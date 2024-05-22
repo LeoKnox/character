@@ -43,12 +43,16 @@ export default Adventure = () => {
     //e.target.name === "down" ? setHito({ x: hito.x + 1, y: hito.y }) : null;
     if (e.target.name === "down") {
       //alert(document.getElementById(hito.x + "-" + (hito.y + 1)).innerHTML);
-
-      document
-        .getElementById(hito.y + 1 + "-" + hito.x)
-        .innerHTML.includes("敵")
-        ? alert("hit")
-        : setHito({ x: hito.x, y: hito.y + 1 });
+      if (
+        document
+          .getElementById(hito.y + 1 + "-" + hito.x)
+          .innerHTML.includes("敵")
+      ) {
+        alert("hit");
+        setHito({ x: hito.x, y: hito.y + 1 });
+      } else {
+        setHito({ x: hito.x, y: hito.y + 1 });
+      }
     }
     e.target.name === "up" ? setHito({ x: hito.x, y: hito.y - 1 }) : null;
     e.target.name === "right" ? setHito({ x: hito.x + 1, y: hito.y }) : null;
