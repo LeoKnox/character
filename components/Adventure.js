@@ -42,10 +42,10 @@ export default Adventure = () => {
     //console.log(document.getElementById(hito.y + 1 + "-" + hito.x).innerHTML);
     //e.target.name === "down" ? setHito({ x: hito.x + 1, y: hito.y }) : null;
     if (e.target.name === "down") {
-      alert(document.getElementById(hito.x + "-" + (hito.y + 1)).innerHTML);
+      //alert(document.getElementById(hito.x + "-" + (hito.y + 1)).innerHTML);
       if (
         document
-          .getElementById(hito.x + "-" + (hito.y + 1))
+          .getElementById(hito.y + 1 + "-" + hito.x)
           .innerHTML.includes("敵")
       ) {
         alert("hit");
@@ -82,6 +82,7 @@ export default Adventure = () => {
       <h3>Adventure Home</h3>
       <div id="advDiv">
         <button onClick={test}>test</button>
+        {hito.y}x{hito.x}
         {roomState}
       </div>
       <div id="effectDiv" onKeyDown={() => charAction()}>
