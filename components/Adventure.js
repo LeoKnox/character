@@ -42,10 +42,10 @@ export default Adventure = () => {
     //console.log(document.getElementById(hito.y + 1 + "-" + hito.x).innerHTML);
     //e.target.name === "down" ? setHito({ x: hito.x + 1, y: hito.y }) : null;
     if (e.target.name === "down") {
-      alert(document.getElementById(hito.x + 1 + "-" + hito.y).innerHTML);
+      alert(document.getElementById(hito.x + "-" + (hito.y + 1)).innerHTML);
       if (
         document
-          .getElementById(hito.x + 1 + "-" + hito.y)
+          .getElementById(hito.x + "-" + (hito.y + 1))
           .innerHTML.includes("敵")
       ) {
         alert("hit");
