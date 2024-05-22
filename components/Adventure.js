@@ -48,10 +48,8 @@ export default Adventure = () => {
           .getElementById(hito.y + 1 + "-" + hito.x)
           .innerHTML.includes("敵")
       ) {
-        alert("hit");
-        document.getElementById(hito.y + 1 + "-" + hito.x).innerHTML = (
-          <button>Attack</button>
-        );
+        alert(<button>Attack</button>);
+
         //setHito({ x: hito.x, y: hito.y + 1 });
       } else {
         setHito({ x: hito.x, y: hito.y + 1 });
