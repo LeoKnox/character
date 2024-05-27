@@ -19,8 +19,6 @@ const hitoStats = () => {
 };
 
 const hitoA = () => {
-  const { hp, heal, damage } = hitoStates();
-
   return (
     <div>
       <p>{hp}</p>
