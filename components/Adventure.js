@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { dungeonData } from "./roomData.js";
+import { hitoA } from "./hito.js";
 // floor = yuka wall = kabe enemy = teki
 
 export default Adventure = () => {
@@ -49,7 +50,7 @@ export default Adventure = () => {
           .getElementById(hito.y + 1 + "-" + hito.x)
           .innerHTML.includes("敵")
       ) {
-        alert({option});
+        alert({ option });
 
         //setHito({ x: hito.x, y: hito.y + 1 });
       } else {
@@ -84,6 +85,7 @@ export default Adventure = () => {
     <>
       <h3>Adventure Home</h3>
       <div id="advDiv">
+        {hitoA}
         <button onClick={test}>test</button>
         {hito.y}x{hito.x}
         {roomState}
