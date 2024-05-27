@@ -85,7 +85,7 @@ export default Adventure = () => {
     <>
       <h3>Adventure Home</h3>
       <div id="advDiv">
-        {hitoA}
+        {hitoA.hp}
         <button onClick={test}>test</button>
         {hito.y}x{hito.x}
         {roomState}
