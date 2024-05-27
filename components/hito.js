@@ -23,7 +23,7 @@ const hitoA = () => {
 
   return (
     <div>
-      <td>人</td>
+      <p>{hp}</p>
     </div>
   );
 };
