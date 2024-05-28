@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const hitoStats = () => {
+const hitoA = () => {
   const [hp, setHp] = useState(50);
 
   const heal = () => {
@@ -11,14 +11,6 @@ const hitoStats = () => {
     setHp(hp - 1);
   };
 
-  return {
-    hp,
-    heal,
-    damage,
-  };
-};
-
-const hitoA = () => {
   return (
     <div>
       <p>{hp}</p>
