@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { dungeonData } from "./roomData.js";
-import { HitoA } from "./hito.js";
+import { Player } from "./Player.js";
 // floor = yuka wall = kabe enemy = teki
 
 export default Adventure = () => {
@@ -86,7 +86,8 @@ export default Adventure = () => {
     <>
       <h3>Adventure Home</h3>
       <div id="advDiv">
-        {HitoA}t<button onClick={test}>test</button>
+        t{Player}
+        <button onClick={test}>test</button>
         {hito.y}x{hito.x}
         {roomState}
       </div>
