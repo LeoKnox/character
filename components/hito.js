@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const hitoA = () => {
+const HitoA = () => {
   const [hp, setHp] = useState("50");
 
   return (
@@ -10,4 +10,4 @@ const hitoA = () => {
   );
 };
 
-export default hitoA;
+export default HitoA;
