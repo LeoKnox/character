@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { dungeonData } from "./roomData.js";
-import { hitoA } from "./hito.js";
+import { HitoA } from "./hito.js";
 // floor = yuka wall = kabe enemy = teki
 
 export default Adventure = () => {
@@ -10,7 +10,7 @@ export default Adventure = () => {
     //console.log("kiiro");
     //document.getElementById("effectDiv").append(<p>floor</p>);
     positionChar(hito);
-    console.log(`hito a ${hitoA}`);
+    //console.log(`hito a ${hitoA}`);
   }, [hito]);
   useEffect(() => {
     positionMob();
@@ -86,7 +86,7 @@ export default Adventure = () => {
     <>
       <h3>Adventure Home</h3>
       <div id="advDiv">
-        <hitoA />t<button onClick={test}>test</button>
+        {HitoA}t<button onClick={test}>test</button>
         {hito.y}x{hito.x}
         {roomState}
       </div>
