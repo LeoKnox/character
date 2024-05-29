@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { dungeonData } from "./roomData.js";
-import { Player } from "./Player.js";
+import Player from "./Player.js";
 // floor = yuka wall = kabe enemy = teki
 
 export default Adventure = () => {
