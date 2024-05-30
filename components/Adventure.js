@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { dungeonData } from "./roomData.js";
-import "./Player.js";
+import { player } from "./Player.js";
 import "./Page.js";
 // floor = yuka wall = kabe enemy = teki
 
@@ -36,9 +36,9 @@ export default Adventure = () => {
     ))
   );
   const positionChar = ({ x, y }) => {
-    document.getElementById(
-      y + "-" + x
-    ).innerHTML = `<label id="hito"><Player /></label>`;
+    document.getElementById(y + "-" + x).innerHTML = (
+      <label id="hito">{player}</label>
+    );
   };
   const takeTurn = (e) => {
     let tileTemp = hito;
