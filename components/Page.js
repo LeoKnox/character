@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { pagePlayer } from "./pagePlayer.js";
 
 export default Page = () => {
-  const [player, setPlayer] = useState({ name: "hito", class: "fighter" });
+  const [player, setPlayer] = useState(pagePlayer);
   return (
     <div>
       <h3> {player.name}</h3>
