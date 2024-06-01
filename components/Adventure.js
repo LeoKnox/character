@@ -37,7 +37,7 @@ export default Adventure = () => {
     ))
   );
   const positionChar = ({ x, y }) => {
-    document.getElementById(y + "-" + x).innerHTML = <Player />;
+    document.getElementById(y + "-" + x).innerHTML.replaceChildren(<Player />);
   };
   const takeTurn = (e) => {
     let tileTemp = hito;
