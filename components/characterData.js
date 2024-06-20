@@ -30,3 +30,13 @@ export const attackAlpha = (factor) => {
 };
 
 export const getHp = cd.hp;
+
+export const characterStats = {
+  name: "Ao",
+  level: 6,
+  hp: 89,
+  attack: 30,
+  magic: 10,
+  defense: 20,
+  magicdefense: 20,
+}
