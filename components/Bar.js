@@ -1,3 +1,6 @@
 export const Bar = ({ label, hp, health }) => {
-  return <p>i'm a bar</p>;
-};
+  return (
+  
+  <p>label: {label}</p>
+  <p>new {hp}/{health}</p>
+)
