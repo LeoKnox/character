@@ -1,3 +1,3 @@
-iexport const CharacterSummary = () => {
+export const CharacterSummary = () => {
     return <p>Character summary</p>
 }
