@@ -1,3 +1,5 @@
+import Bar from "./Bar.js";
+
 export const CharacterSummary = ({ name, level, health, hp }) => {
   return (
     <div>
@@ -6,6 +8,7 @@ export const CharacterSummary = ({ name, level, health, hp }) => {
       <p>
         {health}/{hp}
       </p>
+      <Bar />
     </div>
   );
 };
