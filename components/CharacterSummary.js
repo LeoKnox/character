@@ -1,4 +1,4 @@
-import Bar from "./Bar.js";
+import { Bar } from "./Bar.js";
 
 export const CharacterSummary = ({ name, level, health, hp }) => {
   return (
