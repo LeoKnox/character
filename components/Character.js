@@ -7,7 +7,12 @@ export default Character = () => {
   return (
     <>
       <h3>ttt</h3>
-      <CharacterSummary hp={characterHealth} />
+      <CharacterSummary
+        health={characterHealth}
+        name={characterStats.name}
+        level={characterStats.level}
+        hp={characterStats.hp}
+      />
     </>
   );
 };
