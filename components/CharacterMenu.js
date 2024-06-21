@@ -1,9 +1,9 @@
-export default CharacterMenu.js = () => {
+export default CharacterMenu = ({onAttack, onMagic, onHeal}) => {
     return (
         <>
-    <div>Attack</div>
-    <div>Defend</div>
-    <div>Heal</div>
+    <div onClick={onAttack}>Attack</div>
+    <div onClick={onMagic}>Magic</div>
+    <div onClick={onHeal}>Heal</div>
     </>
     )
-  
+}
