@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CharacterSummary } from "./CharacterSummary.js";
 import { CharacterMenu } from "./CharacterMenu.js";
-import { characterStats } from "./characterData.js";
+import { characterStats, characterAtttack } from "./characterData.js";
 
 export default Character = () => {
   const [characterHealth, setChacterHealth] = useState(characterStats.hp);
@@ -15,7 +15,7 @@ export default Character = () => {
         hp={characterStats.hp}
       />
       <CharacterMenu
-        onAttack={() => console.log("attack")}
+        onAttack={characterAtttack(receiver = characterStats)}
         onMagic={() => console.log("magic")}
         onHeal={() => console.log("heal")}
       />
