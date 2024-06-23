@@ -15,7 +15,7 @@ export default Character = () => {
         hp={characterStats.hp}
       />
       <CharacterMenu
-        onAttack={() => characterAtttack(characterStats)}
+        onAttack={() => characterAtttack("characterStats")}
         onMagic={() => console.log("magic")}
         onHeal={() => console.log("heal")}
       />
