@@ -41,10 +41,10 @@ export const characterStats = {
   magicdefense: 20,
 };
 export const characterAtttack = (receiver, attacker) => {
-  console.log(`receiver ${receiver.hp}`);
+  console.log(`receiver ${receiver}`);
   const damageReceived =
     // attacker.attack = (attacker.level - receiver.level)* 1.25
     characterStats.magic;
-  const newHealth = attacker.hp - damageReceived;
+  const newHealth = receiver - damageReceived;
   return newHealth;
 };
