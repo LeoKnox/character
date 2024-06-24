@@ -5,9 +5,11 @@ import { characterStats, characterAtttack } from "./characterData.js";
 
 export default Character = () => {
   const [characterHealth, setCharacterHealth] = useState(characterStats.hp);
+  const [damageDone, setDamageDone] = useState(0);
   return (
     <>
       <h3>character Summary</h3>
+      <p>Damage Done: {damageDone}</p>
       <CharacterSummary
         health={characterHealth}
         name={characterStats.name}
@@ -16,7 +18,7 @@ export default Character = () => {
       />
       <CharacterMenu
         onAttack={() =>
-          setCharacterHealth(characterAtttack(characterHealth, characterStats))
+          setDamageDone(characterAtttack(damageDone, characterStats))
         }
         onMagic={() => console.log("magic")}
         onHeal={() => console.log("heal")}
