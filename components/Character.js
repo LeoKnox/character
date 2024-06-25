@@ -9,7 +9,9 @@ import {
 } from "./characterData.js";
 
 export default Character = () => {
-  const [characterHealth, setCharacterHealth] = useState(characterStats.hp);
+  const [characterHealth, setCharacterHealth] = useState(
+    characterStats.hp - 30
+  );
   const [damageDone, setDamageDone] = useState(0);
   return (
     <>
@@ -29,7 +31,7 @@ export default Character = () => {
           setDamageDone(characterMagic(damageDone, characterStats))
         }
         onHeal={() =>
-          setCharacterHealth(characterHeal(damageDone, characterStats))
+          setCharacterHealth(characterHeal(damageDone, characterHealth))
         }
       />
     </>
