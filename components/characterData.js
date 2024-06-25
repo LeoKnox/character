@@ -57,3 +57,11 @@ export const characterMagic = (damageDone, attacker) => {
   const newHealth = damageDone + damageReceived;
   return newHealth;
 };
+export const characterHeal = (damageDone, attacker) => {
+  console.log(`receiver ${damageDone}`);
+  const damageReceived =
+    // attacker.attack = (attacker.level - receiver.level)* 1.25
+    3;
+  const newHealth = attacker.hp + damageReceived;
+  return newHealth;
+};
