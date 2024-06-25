@@ -41,7 +41,7 @@ export const characterStats = {
   magicdefense: 20,
 };
 export const characterAtttack = (damageDone, attacker) => {
-  console.log(`receiver ${damageDone}`);
+  console.log(`attack ${damageDone}`);
   const damageReceived =
     // attacker.attack = (attacker.level - receiver.level)* 1.25
     characterStats.attack - 27;
@@ -50,7 +50,7 @@ export const characterAtttack = (damageDone, attacker) => {
 };
 
 export const characterMagic = (damageDone, attacker) => {
-  console.log(`receiver ${damageDone}`);
+  console.log(`magic ${damageDone}`);
   const damageReceived =
     // attacker.attack = (attacker.level - receiver.level)* 1.25
     characterStats.magic - 6;
@@ -58,7 +58,7 @@ export const characterMagic = (damageDone, attacker) => {
   return newHealth;
 };
 export const characterHeal = (damageDone, attacker) => {
-  console.log(`receiver ${damageDone}`);
+  console.log(`heal ${damageDone}`);
   const damageReceived =
     // attacker.attack = (attacker.level - receiver.level)* 1.25
     3;
