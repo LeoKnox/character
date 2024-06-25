@@ -5,6 +5,7 @@ import {
   characterStats,
   characterAtttack,
   characterMagic,
+  characterHeal,
 } from "./characterData.js";
 
 export default Character = () => {
@@ -28,7 +29,7 @@ export default Character = () => {
           setDamageDone(characterMagic(damageDone, characterStats))
         }
         onHeal={() =>
-          setCharacterHealth(characterMagic(damageDone, characterStats))
+          setCharacterHealth(characterHeal(damageDone, characterStats))
         }
       />
     </>
