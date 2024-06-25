@@ -27,7 +27,9 @@ export default Character = () => {
         onMagic={() =>
           setDamageDone(characterMagic(damageDone, characterStats))
         }
-        onHeal={() => console.log("heal")}
+        onHeal={() =>
+          setCharacterHealth(characterMagic(damageDone, characterStats))
+        }
       />
     </>
   );
