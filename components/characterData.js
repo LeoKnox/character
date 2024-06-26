@@ -45,7 +45,7 @@ export const characterAtttack = (damageDone, attacker) => {
   const damageReceived =
     // attacker.attack = (attacker.level - receiver.level)* 1.25
     characterStats.attack - 27;
-  const newHealth = damageDone + damageReceived;
+  const newHealth = damageDone - damageReceived;
   return newHealth;
 };
 
@@ -54,7 +54,7 @@ export const characterMagic = (damageDone, attacker) => {
   const damageReceived =
     // attacker.attack = (attacker.level - receiver.level)* 1.25
     characterStats.magic - 6;
-  const newHealth = damageDone + damageReceived;
+  const newHealth = damageDone - damageReceived;
   return newHealth;
 };
 export const characterHeal = (damageDone, attackerHealth) => {
