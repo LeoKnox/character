@@ -16,15 +16,17 @@ export default Character = () => {
   const [damageDone, setDamageDone] = useState([]);
 
   useEffect(() => {
+    let newArray = [];
     for (let i = 0; i < 2; i++) {
-      setDamageDone([...damageDone, mobStats.hp + i]);
+      newArray.push(mobStats.hp + i);
     }
-    console.log(`damage done ${damageDone[0]}`);
+    setDamageDone(newArray);
+    console.log(`damage done ${damageDone[1]}`);
   }, []);
   return (
     <>
       <h3>character Summary</h3>
-      <p>Monster Health: {damageDone}</p>
+      <p>Monster Health: {damageDone[0]}</p>
       <CharacterSummary
         health={characterHealth}
         name={characterStats.name}
