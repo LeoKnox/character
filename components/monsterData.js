@@ -8,4 +8,8 @@ export const mobStats = {
   magicdefense: 7,
 };
 
-export const mobhp = mobStats.hp;
+const modifier = () => {
+  return Math.floor(Math.random() * 8);
+};
+
+export const mobhp = mobStats.hp + modifier();
