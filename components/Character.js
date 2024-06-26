@@ -26,7 +26,9 @@ export default Character = () => {
   return (
     <>
       <h3>character Summary</h3>
-      <p>Monster Health: {damageDone[0]}</p>
+      <p>
+        Monster Health: {damageDone[0]}:{damageDone[1]}
+      </p>
       <CharacterSummary
         health={characterHealth}
         name={characterStats.name}
