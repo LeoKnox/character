@@ -19,11 +19,12 @@ export default Character = () => {
     for (let i = 0; i < 2; i++) {
       setDamageDone([...damageDone, mobStats.hp + i]);
     }
+    console.log(`damage done ${damageDone[0]}`);
   }, []);
   return (
     <>
       <h3>character Summary</h3>
-      <p>Monster Health: {damageDone[1]}</p>
+      <p>Monster Health: {damageDone}</p>
       <CharacterSummary
         health={characterHealth}
         name={characterStats.name}
