@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CharacterSummary } from "./CharacterSummary.js";
 import { CharacterMenu } from "./CharacterMenu.js";
 import { mobStats } from "./monsterData.js";
@@ -14,9 +14,12 @@ export default Character = () => {
     characterStats.hp - 30
   );
   const [damageDone, setDamageDone] = useState([]);
-  for (let i = 0; i < 2; i++) {
-    setDamageDone([...damageDone, mobStats.hp + i]);
-  }
+
+  useEffect(() => {
+    for (let i = 0; i < 2; i++) {
+      setDamageDone([...damageDone, mobStats.hp + i]);
+    }
+  }, []);
   return (
     <>
       <h3>character Summary</h3>
