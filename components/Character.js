@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { CharacterSummary } from "./CharacterSummary.js";
 import { CharacterMenu } from "./CharacterMenu.js";
-import { mobStats } from "./monsterData.js";
+import { mobStats, mobhp } from "./monsterData.js";
 import {
   characterStats,
   characterAtttack,
@@ -18,7 +18,7 @@ export default Character = () => {
   useEffect(() => {
     let newArray = [];
     for (let i = 0; i < 2; i++) {
-      newArray.push(mobStats.hp + i);
+      newArray.push(mobhp);
     }
     setDamageDone(newArray);
     console.log(`damage done ${damageDone[1]}`);
