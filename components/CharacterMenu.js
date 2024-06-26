@@ -1,9 +1,9 @@
 export const CharacterMenu = ({ onAttack, onMagic, onHeal }) => {
   return (
     <>
-      <div onClick={onAttack}>Attack</div>
-      <div onClick={onMagic}>Magic</div>
-      <div onClick={onHeal}>Heal</div>
+      <button onClick={onAttack}>Attack</button>
+      <button onClick={onMagic}>Magic</button>
+      <button onClick={onHeal}>Heal</button>
     </>
   );
 };
