@@ -13,11 +13,11 @@ export default Character = () => {
   const [characterHealth, setCharacterHealth] = useState(
     characterStats.hp - 30
   );
-  const [damageDone, setDamageDone] = useState(mobStats.hp);
+  const [damageDone, setDamageDone] = useState([mobStats.hp]);
   return (
     <>
       <h3>character Summary</h3>
-      <p>Monster Health: {damageDone}</p>
+      <p>Monster Health: {damageDone[0]}</p>
       <CharacterSummary
         health={characterHealth}
         name={characterStats.name}
@@ -38,4 +38,3 @@ export default Character = () => {
     </>
   );
 };
-
