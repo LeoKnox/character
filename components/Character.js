@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CharacterSummary } from "./CharacterSummary.js";
 import { CharacterMenu } from "./CharacterMenu.js";
-import { mobhp } from "./monsterData.js";
+import { mobStats } from "./monsterData.js";
 import {
   characterStats,
   characterAtttack,
@@ -13,7 +13,7 @@ export default Character = () => {
   const [characterHealth, setCharacterHealth] = useState(
     characterStats.hp - 30
   );
-  const [damageDone, setDamageDone] = useState(mobhp);
+  const [damageDone, setDamageDone] = useState(mobStats.hp);
   return (
     <>
       <h3>character Summary</h3>
@@ -38,3 +38,4 @@ export default Character = () => {
     </>
   );
 };
+
