@@ -9,7 +9,7 @@ export const mobStats = {
 };
 
 const modifier = () => {
-  return Math.floor(Math.random() * 8);
+  return mobStats.hp + Math.floor(Math.random() * 8);
 };
 
-export const mobhp = mobStats.hp + modifier();
+export const mobhp = modifier();
