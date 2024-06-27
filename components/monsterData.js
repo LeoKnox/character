@@ -12,9 +12,12 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
+const damageEight = Math.floor(Math.random() * 8);
+
 const modifier = () => {
   let x = getRandomInt(8);
-  return getRandomInt(8);
+  return damageEight;
+  //return getRandomInt(x);
 };
 
 export const mobhp = modifier();
