@@ -18,10 +18,10 @@ export default Character = () => {
   useEffect(() => {
     let newArray = [];
     for (let i = 0; i < 2; i++) {
-      setDamageDone([...damageDone, mobhp]);
-      //newArray.push(mobhp);
+      //setDamageDone([...damageDone, mobhp]);
+      newArray.push(mobhp);
     }
-    //setDamageDone(newArray);
+    setDamageDone(mobhp);
     console.log(`damage done ${damageDone[1]}`);
   }, []);
   return (
