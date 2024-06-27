@@ -14,11 +14,11 @@ function getRandomInt(max) {
 
 const damageEight = Math.floor(Math.random() * 8);
 
-const modifier = () => {
+const modifier = (mobNum) => {
   let x = getRandomInt(8);
   let newArr = [];
   //return damageEight;
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < mobNum; i++) {
     newArr.push(getRandomInt(8));
   }
   return newArr;
