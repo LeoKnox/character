@@ -28,7 +28,7 @@ export default Character = () => {
     <>
       <h3>character Summary</h3>
       <p>
-        Monster Health: {damageDone[0]}:{damageDone[1]}
+        Monster Health: {damageDone[0]}:{damageDone[2]}
       </p>
       <CharacterSummary
         health={characterHealth}
