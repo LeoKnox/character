@@ -16,8 +16,12 @@ const damageEight = Math.floor(Math.random() * 8);
 
 const modifier = () => {
   let x = getRandomInt(8);
-  return damageEight;
-  //return getRandomInt(x);
+  let newArr = [];
+  //return damageEight;
+  for (let i = 0; i < 2; i++) {
+    newArr.push(getRandomInt(8));
+  }
+  return newArr;
 };
 
 export const mobhp = modifier();
