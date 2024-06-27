@@ -14,7 +14,7 @@ function getRandomInt(max) {
 
 const damageEight = Math.floor(Math.random() * 8);
 
-const modifier = (mobNum) => {
+export const modifier = (mobNum) => {
   let x = getRandomInt(8);
   let newArr = [];
   //return damageEight;
