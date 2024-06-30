@@ -9,7 +9,7 @@ export const mobStats = {
 };
 
 function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+  return mobStats.hp + Math.floor(Math.random() * max);
 }
 
 const damageEight = Math.floor(Math.random() * 8);
