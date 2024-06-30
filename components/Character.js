@@ -21,14 +21,17 @@ export default Character = () => {
       //setDamageDone([...damageDone, mobhp]);
       newArray.push(mobhp);
     }
-    setDamageDone(modifier(3));
+    setDamageDone(modifier(8));
     console.log(`damage done ${damageDone[1]}`);
   }, []);
   return (
     <>
       <h3>character Summary</h3>
       <p>
-        Monster Health: {damageDone[0]}:{damageDone[2]}
+        Monster Health:{" "}
+        {damageDone.map((mob) => (
+          <p>{mob}</p>
+        ))}
       </p>
       <CharacterSummary
         health={characterHealth}
