@@ -4,7 +4,7 @@ export const CharacterMenu = ({ onAttack, onMagic, onHeal }) => {
     <>
       <select>
         <option>Attack</option>
-        <option onClick={onAttack}>{onAttack[0]}</option>
+        <option onChange={onAttack}>{onAttack[0]}</option>
       </select>
       <button onClick={onMagic}>Magic</button>
       <button onClick={onHeal}>Heal</button>
